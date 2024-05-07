@@ -20,6 +20,7 @@ function Home() {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
+                boxSizing={"border-box"}
             >
                 <CircularProgress />
             </Box>
