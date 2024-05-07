@@ -20,6 +20,9 @@ const ConfirmOrder = () => {
 
 
     useEffect(() => {
+        if (!id) {
+            return
+        }
         findClient(id).then((client) => {
             if (!client) {
                 return
