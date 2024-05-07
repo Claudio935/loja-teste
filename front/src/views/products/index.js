@@ -10,6 +10,7 @@ import { DialogModal } from "../../components/dialog";
 import { useProduct } from "../../hook/useProduct";
 import { UpdateModal } from "./modal/update";
 import { AccordionProduct } from "../../components/Accordion";
+import { NotFoundItem } from "../notFoundItem";
 
 
 export const Products = () => {
@@ -60,10 +61,14 @@ export const Products = () => {
             </Box>
         )
     }
-
+    if (!dataProducts.length > 0) {
+        return (
+            <NotFoundItem />
+        )
+    }
     return (
         <div>
-            {dataProducts.map((product) => {
+            {dataProducts?.map((product) => {
                 return (
                     <AccordionProduct product={product} key={product._id}>
                         <Tooltip title='Deletar produto'>

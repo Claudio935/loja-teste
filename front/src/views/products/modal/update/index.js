@@ -37,7 +37,7 @@ export const UpdateModal = ({ open, handleClose, handleUpdate, id }) => {
                         <TextField
                             variant='outlined'
                             label='Nome'
-                            value={dataForm.name || ""}
+                            value={dataForm?.name || ""}
                             onChange={(event) =>
                                 setDataForm((dataForm) => ({
                                     ...dataForm,
@@ -50,7 +50,7 @@ export const UpdateModal = ({ open, handleClose, handleUpdate, id }) => {
                             name="price"
                             variant='outlined'
                             label='Preço'
-                            value={dataForm.price || ""}
+                            value={dataForm?.price || ""}
                             onChange={(event) =>
                                 setDataForm((dataForm) => ({
                                     ...dataForm,
@@ -68,7 +68,7 @@ export const UpdateModal = ({ open, handleClose, handleUpdate, id }) => {
                                     ...dataForm,
                                     category: event.target.value
                                 }))}
-                            value={dataForm.category || ""}
+                            value={dataForm?.category || ""}
                             fullWidth />
                     </Grid>
                     <Grid item xs={12}>
@@ -76,7 +76,7 @@ export const UpdateModal = ({ open, handleClose, handleUpdate, id }) => {
                             name="description"
                             variant='outlined'
                             label='Descrição'
-                            value={dataForm.description || ""}
+                            value={dataForm?.description || ""}
                             onChange={(event) =>
                                 setDataForm((dataForm) => ({
                                     ...dataForm,

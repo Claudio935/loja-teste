@@ -1,9 +1,15 @@
 import { ExpandMore } from "@mui/icons-material"
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material"
+import { NotFoundItem } from "../../views/notFoundItem"
 
 
 export const AccordionProduct = ({ children, product }) => {
 
+    if (!product) {
+        return (
+            <NotFoundItem />
+        )
+    }
     return (
         <Accordion key={product._id} sx={{ width: '100%' }} >
             <AccordionSummary
