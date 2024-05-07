@@ -67,6 +67,7 @@ const ConfirmOrder = () => {
                 <Box
                     overflow={"auto"}
                     height={"calc(100vh - 184px)"}
+                    width={"50%"}
                     boxSizing={"border-box"}
                     padding={"10px"}
                 >
